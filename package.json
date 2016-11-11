@@ -7,12 +7,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "NODE_ENV=test mocha"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chai": "^3.5.0",
+    "locus": "^1.2.0",
     "mocha": "^3.1.2"
   }
 }
