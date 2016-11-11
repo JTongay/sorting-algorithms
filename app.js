@@ -1,3 +1,6 @@
+require('locus');
+console.log(process.env.NODE_ENV + "is the environment");
+
 var algorithms = {
   bubbleSort: function(arr){
     var swapped;
@@ -25,13 +28,18 @@ var algorithms = {
       console.log(temp, "temp");
       for(var j = i - 1; j >= 0 && arr[j] > temp; --j) {
         console.log(j, "j Index");
-        count++
+        count++;
         arr[j+1] = arr[j];
+      }
+      if(process.env.NODE_ENV !== 'test'){
+        eval(locus);
       }
       arr[j+1] = temp;
     }
     console.log(count, "times swapped");
   }
-}
+};
 
 module.exports = algorithms
+
+algorithms.insertionSort([6,3,8,2,6,9,0,3,4,7,2,2]);
