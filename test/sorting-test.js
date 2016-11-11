@@ -50,7 +50,7 @@ describe('Insertion Sort', function () {
 
 describe('Almost Sorted', function () {
 
-   it('Should sort the almost sorted array', function () {
+   it('Should sort the almost sorted array at the end', function () {
 
      var testing = [3,5,9,10,11,23,13];
      sort.bubbleSort(testing);
@@ -59,5 +59,17 @@ describe('Almost Sorted', function () {
 
    })
  })
+
+ describe('Almost Sorted The Sequal', function () {
+
+    it('Should sort the almost sorted array at the beginning', function () {
+
+      var testing = [5,3,9,10,11,23,13];
+      sort.bubbleSort(testing);
+      var result = [3,5,9,10,11,13,23];
+      expect(testing).to.deep.equal(result)
+
+    })
+  })
 
 })
